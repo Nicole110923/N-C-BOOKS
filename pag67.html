@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+function mostrarMensaje1() {
+	var edad;
+	edad=prompt("Por favor introduce edad:");
+	if(edad==""){
+		alert("No has introducido edad");
+}else{
+	edad=Number(edad);
+	switch (edad){
+	case 0:
+		alert("Acaba de nacer hace poco.No ha cumplido yn año");
+		break;
+	case 18:
+		alert("Esta justo en la mayoria de edad");
+		break;
+	case 65:
+		alert("Esta en la edad de Jubilacion");
+		break;
+default: 
+	lert("La edad no es critica");
+		}
+	}
+}
+
+	</script>
+</head>
+<body>
+<div>
+	<p>Aqui un parrafo de texto situando antes la imagen, dentro de un div contenedor</p>
+	<img onclick="mostrarMensaje1()" src="https://i.imgur.com/afC0L.jpg" alt="Notepad++" title="Notepad++, un util editor de texto">
+<p onclick="aler('Alerta JavaScript')" style="color: #D2691E;">Aqui otro parrafo de texto. JavaScript es un lenguaje para dotar de efectos dinamicos a las paginas web.
+</p>
+</div>
+</body>
+</html>
