@@ -1,111 +1,72 @@
 body {
-    background: #d7bde2 ;
+    background: #d7bde2;
     text-align: center;
-}
-p{
-   
-    font-family:cursive;
-    font-size:20px;
-    text-align: center;
-
-}
-.enlace {
-
-    font-family: inherit;
-    font-size: 150%;
-    color: black;
-    left: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.tabla{
-    border-collapse:collapse;
-}
-div.a{
-    border-radius: 30px;
-    display: inline-block;
-    text-align: center;
-    border-collapse:collapse;
-    background: #a569bd;
-    width: 22%;
-    height: 13%;
-}
-
-img {
+header {
     position: relative;
-    display: block;
-    width: 100%;
-    height: 10%;
-    object-fit: cover;
+    padding: 10px 20px;
 }
 
- .l{
-    width: 150px;
-    height: auto;
-    position: absolute;
-    left: 2px;
-    filter: hue-rotate(0deg);
-    border-radius: 10px;
-}
-.ol{
-    width: 150px;
-    height: auto;
-    position: absolute;
-    right:2px;
-    filter: hue-rotate(0deg);
-    border-radius: 10px;
-}
-
-.imagen {
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-
-.primero {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-.cuadro {
-    background-color: #f4f4f4;
+footer {
+    font-size: 20px;
     padding: 20px;
-    margin-top: 20px;
+    background-color: #f5eef8;
+    margin-top: 40px;
+    inset-block: 40px;
+}
+i, {
+    font-size: 30px;
+}
+h1, h2, h3 {
+    color: #4a235a;
+    margin: 10px 0;
 }
 
-h2 {
-    color: black;
-
-}
-    .des{
-  max-width: 100%;  
-  height: auto;
-  width: 250px;     
+p {
+    font-family: cursive;
+    font-size: 20px;
+    color: #4a235a;
 }
 
-h1 {
-    color: black;
+.eslogan {
     text-align: center;
+    padding: 20px;
+    background-color: #ce93d8;
+    margin-bottom: 20px;
+    font-family: initial;
+    font-size: 40px;
+    color: #4a235a;
+    border-radius: 10px;
 }
 
-a {
-  display: inline-block;
-  margin-right: 10px;
-  font-size: 15px;
+.menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #a569bd;
+    margin: 0;
+}
 
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
 }
-.bok {
-    font-family: inherit;
-    font-size: 150%;
-    color: black;
-    left: 100%;
+
+.menu a:hover {
+    background-color: #884ea0;
+    border-radius: 5px;
 }
+
 .catalogo {
     display: flex;
     flex-wrap: wrap;
@@ -115,7 +76,7 @@ a {
 }
 
 .libro {
-    background-color:#ebdef0;
+    background-color: #ebdef0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 250px;
@@ -124,12 +85,12 @@ a {
     transition: transform 0.3s ease;
 }
 
-.libro{
+.libro:hover {
     transform: scale(1.05);
 }
 
 .imagen-libro {
-     width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 8px;
     max-height: 300px;
@@ -140,39 +101,136 @@ a {
     padding-top: 10px;
 }
 
-.info-libro h2 {
+.info-libro h2, .info-libro h3 {
     font-size: 1.5em;
     color: #333;
 }
 
 .info-libro p {
     font-size: 1em;
-    color: #666;
+    color: #555;
     margin: 5px 0;
 }
 
-a {
+#carrito-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    background-color: #f9ebf9;
+    border: 2px solid #d7bde2;
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: left;
+}
+
+#carrito-container h2 {
+    font-size: 1.2em;
+    color: #6c3483;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#carrito-lista {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#carrito-lista li {
+    font-size: 0.95em;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #d7bde2;
+    padding: 4px 0;
+    color: #4a235a;
+}
+
+#total {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #884ea0;
+}
+
+.agregar-carrito {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #a569bd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.agregar-carrito:hover {
+    background-color: #884ea0;
+}
+
+.descuento {
+    width: 250px;
+    height: auto;
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.logo {
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    border-radius: 10px;
+    filter: hue-rotate(0deg);
+}
+
+.logo.l {
+    left: 2px;
+}
+
+.logo.ol {
+    right: 2px;
+}
+
+.m {
+    text-align: right;
+}
+
+.n {
+    background: #d7bde2;
+    border-radius: 20px;
+}
+
+.a {
+    font-size: 25px; 
+    background-color: lightpink;
+    color: black; 
+    border: none; 
+    border-radius: 5px; 
+    text-align: center;
+}
+
+div.a {
+    border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+    background: #a569bd;
+    width: 22%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.enlace {
+    font-family: inherit;
+    font-size: 150%;
+    color: white;
     text-decoration: none;
-    color: #007BFF;
-    font-size: 15px;
 }
 
-a:hover {
+.enlace:hover {
     text-decoration: underline;
-}
-.mv{
-    text-align: center;
-    font-size: 20px;
-}
-
-.eslogan{
-    text-align: center;
-    padding: 20px;
-    background-color:#ce93d8 ;
-    margin-bottom: 20px;
-    font-family: initial;
-    font-size: 40px;
-}
-footer{
-    font-size: 20px;
 }

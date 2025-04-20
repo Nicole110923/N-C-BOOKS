@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Catálogo de Libros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="stylesheet" href="categoria.css" />
 </head>
 <body>
-  <!-- Logos -->
   <img src="logo.png" alt="logo" class="l" />
   <img src="logo.png" alt="logo" class="ol" />
   <h1>Catálogo de Libros<br>Libros de todos y con todo</h1>
@@ -16,6 +17,7 @@
   <h2>🛒 Carrito de Compras</h2>
   <ul id="carrito-lista"></ul>
   <p id="total">Total: $0</p>
+
 
   <button id="boton-pagar" class="n">Pagar</button>
   <div id="formulario-pago" style="display: none; margin-top: 10px;">
@@ -174,17 +176,7 @@
         <button class="agregar-carrito" data-nombre="Asesino de Brujas 3" data-precio="539">Agregar al carrito</button>
       </div>
     </div>
-<a href="ech.html">
-    <div class="libro">
-      <img src="ech.png" class="imagen-libro" alt="Entre la Chispa y la Hoguera">
-      <div class="info-libro">
-        <h2>Entre la Chispa y la Hoguera</h2>
-        <p><strong>Autor:</strong> April Genevieve Tucholke</p>
-        <p><strong>Género:</strong> Romance, Drama</p>
-        <p><strong>Precio:</strong> $389</p></a>
-        <button class="agregar-carrito" data-nombre="Entre la Chispa y la Hoguera" data-precio="389">Agregar al carrito</button>
-      </div>
-    </div>
+
 <a href="d.html">
     <div class="libro">
       <img src="damian.png" class="imagen-libro" alt="Damián">
@@ -219,56 +211,21 @@
       </div>
     </div>
   </div>
+<a href="paginaprincipal.html"><button class="inicio">Inicio🏠</button></a>
+  <a href="categoria.html"><button class="arriba">Volver</button></a>
+  <footer>
+<p class="m">Contactos<br>
+  <a href="https://www.instagram.com/nc_books25/" target="_blank"> 
+    <i class="fab fa-instagram"></i></a>
+  <a href="https://www.tiktok.com/@nc_books25?_t=ZM-8ve50Um5XSY&_r=1" target="_blank">
+    <i class="fab fa-tiktok"></i></a>
+<a href="https://wa.me/56666666666" target="_blank">
+    <i class="fab fa-whatsapp"></i></a></p>
 
-  
-  <script>
-    const botones = document.querySelectorAll('.agregar-carrito');
-    const carritoLista = document.getElementById('carrito-lista');
-    const totalTexto = document.getElementById('total');
-    let total = 0;
+      <p><br>&copy; 2025. Todos los derechos reservados. Nicole Casillas<br>
+    N'C BOOKS.</p>
+  </footer>
+<script src="carro.js"></script>
 
-    botones.forEach(boton => {
-      boton.addEventListener('click', () => {
-        const nombre = boton.getAttribute('data-nombre');
-        const precio = parseFloat(boton.getAttribute('data-precio'));
-
-        const item = document.createElement('li');
-        item.textContent = `${nombre} - $${precio}`;
-        carritoLista.appendChild(item);
-
-        total += precio;
-        totalTexto.textContent = `Total: $${total}`;
-      });
-    });
-
-const botonPagar = document.getElementById('boton-pagar');
-const formularioPago = document.getElementById('formulario-pago');
-const formulario = document.getElementById('pago-form');
-
-botonPagar.addEventListener('click', () => {
-  if (carritoLista.children.length === 0) {
-    alert("Tu carrito está vacío.");
-    return;
-  }
-  formularioPago.style.display = 'block';
-});
-
-formulario.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const nombre = formulario.nombre.value;
-  const direccion = formulario.direccion.value;
-  const telefono = formulario.telefono.value;
-  const tarjeta = formulario.tarjeta.value;
-
-  alert(`Gracias por tu compra, ${nombre}!\nTu pedido será enviado a:\n${direccion}\nNos comunicaremos al: ${telefono}`);
-
-  carritoLista.innerHTML = '';
-  total = 0;
-  totalTexto.textContent = 'Total: $0';
-  formularioPago.style.display = 'none';
-  formulario.reset();
-});
-
-  </script>
 </body>
 </html>

@@ -4,10 +4,10 @@ body {
 }
 p{
    
-    font-family:cursive;
-    font-size:150%;
-    text-align: center;
-
+font-family:cursive;
+font-size:150%;
+text-align: left;
+inset-block: 09px;
 }
 
 .ig{
@@ -17,6 +17,9 @@ p{
     text-align: center;
     filter: hue-rotate(0deg);
     border-radius: 10px;
+}
+h3{
+    text-align: left;
 }
 .l{
     width: 150px;

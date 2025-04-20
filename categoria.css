@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .ol{
@@ -21,6 +22,13 @@ body {
     filter: hue-rotate(0deg);
     border-radius: 10px;
 }
+
+footer {
+    font-size: 20px;
+    padding: 20px;
+    background-color: #f5eef8;
+    margin-top: 40px;
+}
 h1 {
     text-align: center;
     padding: 20px;
@@ -38,7 +46,7 @@ h1 {
 }
 
 .libro {
-    background-color:#ebdef0;
+    background-color: #ebdef0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 250px;
@@ -47,10 +55,9 @@ h1 {
     transition: transform 0.3s ease;
 }
 
-.libro{
+.libro:hover {
     transform: scale(1.05);
 }
-
 .imagen-libro {
      width: 100%;
     height: auto;
@@ -93,6 +100,7 @@ a:hover {
       text-align: center;
 }
 #carrito-container {
+    text-align:left ;
     position: fixed;
     top: 10px;
     right: 10px;
@@ -139,3 +147,31 @@ a:hover {
     background:#d7bde2;
     border-radius: 20px;
 }
+.agregar-carrito {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #a569bd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.agregar-carrito:hover {
+    background-color: #884ea0;
+}
+.inicio, .arriba {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #a569bd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.arriba, .inicio {
+    background-color: #884ea0;
+}
+
